@@ -1,0 +1,29 @@
+
+# Request body must go after an empty line
+POST http://localhost:8080
+Content-Type: application/json
+:userAgent
+
+{"cmd" : "FETCH-ALL",
+ "data"  : "NiGgER"}
+
+###
+
+POST http://localhost:8080
+Content-Type: application/json
+:userAgent
+
+{"cmd" : "NEW",
+ "data"  : {"SaS" : "hOhlidsaiÑasd" }}
+
+###
+
+
+POST http://localhost:8080
+Content-Type: application/json
+:userAgent
+
+{"cmd" : "DELETE",
+ "data"  : 
+        "6733832646930"}
+
