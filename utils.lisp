@@ -4,7 +4,8 @@
 (defmacro with-generic-error-handler (exp)
   `(handler-case 
        ,exp
-     (t (c) 
+     (t (c)
+       (declare (ignore c))
        (cl-json:encode-json-to-string `(("RESULT" . "ERR"))))))
 
 (defun body-to-string (stream)
